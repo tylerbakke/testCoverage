@@ -1,0 +1,41 @@
+codecov:
+  notify:
+    require_ci_to_pass: yes
+  bot:
+    "tylerbakke@gmail.com"
+
+coverage:
+  precision: 2
+  round: down
+  range: "50...70"
+
+  status:
+    project:
+      default:
+        # basic
+        target: auto
+        threshold: 50
+        base: auto
+        # advanced
+        branches: null
+        if_no_uploads: error
+        if_not_found: success
+        if_ci_failed: error
+        only_pulls: true
+        flags: null
+        paths: null
+    patch: yes
+    changes: no
+
+parsers:
+  gcov:
+    branch_detection:
+      conditional: yes
+      loop: yes
+      method: no
+      macro: no
+
+comment:
+  layout: "reach, diff, flags, files, footer"
+  behavior: default
+  require_changes: no
