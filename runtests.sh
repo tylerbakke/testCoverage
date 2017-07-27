@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo 'mode: count' > coverage.txt
 
-for pkg in go list ./...;
+for pkg in $(go list ./...);
 do
     dir="$GOPATH/src/$pkg"
     len="${#PWD}"
