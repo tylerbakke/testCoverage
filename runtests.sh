@@ -16,4 +16,4 @@ do
     fi
 done
 
-bash <(curl -s https://codecov.io/bash) -t
+bash <(curl -s https://codecov.io/bash)
