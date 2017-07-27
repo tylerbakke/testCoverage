@@ -5,7 +5,7 @@ for pkg in $(go list ./...);
 do
     dir="$GOPATH/src/$pkg"
     len="${#PWD}"
-    dir_relative=".${dir:$len}"
+    dir_relative="./${dir:$len}"
 
     go test -a -installsuffix cgo -v -covermode=count -coverprofile="$dir_relative/profile.tmp" "$dir_relative"
 
@@ -16,4 +16,4 @@ do
     fi
 done
 
-bash <(curl -s https://codecov.io/bash)
+#bash <(curl -s https://codecov.io/bash)
