@@ -1,13 +1,13 @@
-#!/usr/bin/env bash
+#!/bin/bash
 echo 'mode: count' > coverage.txt
 
 for pkg in $(go list ./...);
 do
     dir="$GOPATH/src/$pkg"
     len="${#PWD}"
-    dir_relative="./${dir:$len}"
+    dir_relative=".${dir:$len}"
 
-    go test -a -installsuffix cgo -v -covermode=count -coverprofile="$dir_relative/profile.tmp" "$dir_relative"
+    go test -v -covermode=count -coverprofile="$dir_relative/profile.tmp" "$dir_relative"
 
     if [[ -f "$dir_relative/profile.tmp" ]]
     then
