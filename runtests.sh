@@ -1,6 +1,7 @@
 #!/bin/bash
 echo 'mode: count' > coverage.txt
 
+echo "Running tests..."
 for pkg in $(go list ./...);
 do
     go test -v -covermode=count -coverprofile="profile.tmp" ${pkg}
