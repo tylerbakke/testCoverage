@@ -19,3 +19,7 @@ func CreateEmployee(job work.Job) Employee {
 func (e Employee) GetName() string {
 	return e.name
 }
+
+func (e Employee) GetJob() string {
+	return e.job.GetTitle()
+}
