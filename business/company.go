@@ -1,8 +1,8 @@
 package business
 
 import (
-	"github.com/testCoverage/person"
-	"github.com/testCoverage/work"
+	"github.com/tylerbakke/testCoverage/person"
+	"github.com/tylerbakke/testCoverage/work"
 )
 
 type Company struct{
@@ -12,11 +12,11 @@ type Company struct{
 }
 
 func CreateCompany() Company{
-	var myCompany Company
+	return Company{
+		companyName: "Splunk",
+		employeeList: make(map[string]person.Employee),
+	}
 
-	myCompany.companyName = "Splunk"
-
-	return myCompany
 }
 
 func (c Company) FillPositions(){

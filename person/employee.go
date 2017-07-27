@@ -1,7 +1,7 @@
 package person
 
 import (
-	"github.com/testCoverage/work"
+	"github.com/tylerbakke/testCoverage/work"
 )
 
 type Employee struct {

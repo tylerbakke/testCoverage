@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/testCoverage/business"
+	"github.com/tylerbakke/testCoverage/business"
 )
 
 func main() {

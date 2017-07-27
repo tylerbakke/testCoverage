@@ -14,7 +14,7 @@ func TestCreateCompany(t *testing.T) {
 
 func TestFillPositions(t *testing.T) {
 	testCompany.FillPositions()
-	if testCompany.employeeList["Programmer"].GetName() != "Mindless"  {
+	if testCompany.employeeList["Mindless Drone"].GetName() != "Mindless Drone"  {
 		t.Errorf("ERROR: Failed assignment")
 	}
 }
